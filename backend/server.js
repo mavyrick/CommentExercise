@@ -2,7 +2,6 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
 import mongoose from 'mongoose';
-// import { getSecret } from './secrets';
 import Comment from './models/comment'
 
 const app = express();
@@ -10,7 +9,6 @@ const router = express.Router();
 const API_PORT = process.env.API_PORT || 3001;
 
 mongoose.connect('mongodb://public_user:public_user1@ds115971.mlab.com:15971/bigpanda-exercise')
-// mongoose.connect('mongodb://localhost:3001');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
