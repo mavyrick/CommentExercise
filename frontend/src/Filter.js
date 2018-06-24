@@ -37,7 +37,7 @@ class Filter extends Component {
 			value={this.state.filterValue}
 			onChange={e => this.updateFilterValue(e)}
 			/>
-			<Button className="filter-button" type="submit" bsStyle="primary" bsSize="large"><Glyphicon glyph="search" /> </Button>
+			<Button className="filter-button" type="submit" bsStyle="primary" bsSize="large"><Glyphicon className="search" glyph="search" /> </Button>
 			</form>
 			</div>  
 			)}

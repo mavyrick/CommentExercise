@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:server": "cd backend && nodemon server.js --exec babel-node --presets es2015,stage-0",
-    "start:client": "cd bigpanda-exercise && yarn start",
-    "start:run": "concurrently \"yarn start:server\" \"yarn start:client\""
+    "start:client": "cd frontend && yarn start",
+    "start:project": "concurrently \"yarn start:server\" \"yarn start:client\""
   },
   "author": "",
   "description": "",

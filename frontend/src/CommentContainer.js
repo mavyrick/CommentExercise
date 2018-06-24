@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Filter from './Filter.js';
 import Comment from './Comment.js';
 
-// const CommentContainer = props => {
-
   class CommentContainer extends Component {
 
    constructor(props) {
@@ -36,6 +34,7 @@ import Comment from './Comment.js';
         )
     }
   })
+  // if (this.props.data.size > 0) {
    return (
     <div className="container-wrapper">
     <Filter handleFilter={this.myCallback} />
@@ -45,6 +44,9 @@ import Comment from './Comment.js';
     </div>
     )
  }
+ // else {
+//   return (<div>No comments yet!</div>)
+// }
 }
 
 CommentContainer.propTypes = {

@@ -11,7 +11,7 @@ const Comment = props => (
 	<img className="avatar" src={"https://www.gravatar.com/avatar/" + hash} />
 	<h4 className="email">{props.email}</h4>
 	<h4 className="message">{props.message}</h4>
-	<Button className="delete-button" onClick={() => { props.handleDeleteComment(props.id); }} bsStyle="danger" bsSize="small">
+	<Button className="delete-button" onClick={() => { props.handleDeleteComment(props.id); }} bsStyle="danger" bsSize="xsmall">
 	<Glyphicon glyph="remove" />
 	</Button>
 	</div>    
