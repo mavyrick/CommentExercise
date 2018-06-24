@@ -1,0 +1,144 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+https://mail.google.com/mail/u/0/#search/yifat/164181fbba87b4b9?projector=1&messagePartId=0.1
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+body {
+  background-color: rgb(249, 249, 249);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.app-wrapper {
+  width: 750px;
+  margin: 0 auto;
+  text-align: center; 
+  margin: 60px;
+  display: inline-block;
+  border: solid rgb(239, 239, 239) 1px;
+}
+
+.form-wrapper {
+  width: 100%;
+  height: 320px;
+  padding-top: 30px;
+  background-color: rgb(239, 239, 239);
+
+}
+
+.email-input {
+  width: 690px;
+  height: 50px;
+  padding: 20px;
+}
+
+.comment-input {
+  width: 690px;
+  height: 100px;
+  padding: 20px;
+  padding-top: 14px;
+  resize: none; 
+}
+
+.submit-button {
+  height: 55px;
+  width: 125px;
+  margin: 10px;
+  position: relative;
+  left: 282px;
+  top: 2px;
+  font-size: 20px;
+}
+
+
+.comment-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgb(255, 255, 255);  
+}
+
+.filter-wrapper {
+  margin-bottom: 45px;
+}
+
+.filter-input {
+  width: 637px;
+  height: 50px;
+  padding: 20px;
+  /*margin-right: px;*/
+}
+
+.filter-button {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  bottom: 2px;
+}
+
+.input-style {
+  border: solid rgb(210, 210, 210) 1px;
+  font-size: 16px;
+}
+
+.comment-wrapper {
+  margin-top: 30px;
+  margin-left: 35px;
+  text-align: left;
+  position: relative;
+}
+
+.avatar {
+  height: 75px;
+  width: 75px;
+  border-radius: 7px;
+}
+
+.email {
+  position: absolute;
+  left: 95px;
+  top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.message {
+  position: absolute;
+  left: 95px;
+  top: 35px;
+  font-size: 20px;
+  color: rgb(149, 149, 149)
+}
+
+.delete-button {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  height: 25px;
+  width: 25px;
+  /*border-radius: 1000px;*/
+}
