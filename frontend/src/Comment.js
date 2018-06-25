@@ -3,19 +3,32 @@ import PropTypes from 'prop-types';
 import Popup from 'react-popup';
 import { Button } from 'react-bootstrap';
 import { Glyphicon } from 'react-bootstrap';
-var MD5 = require('md5.js')
-var hash = new MD5().update("test@test.com").digest('hex')
+import MD5 from 'md5.js';
 
-const Comment = props => (
-	<div className="comment-wrapper">
-	<img className="avatar" src={"https://www.gravatar.com/avatar/" + hash} />
-	<h4 className="email">{props.email}</h4>
-	<h4 className="message">{props.message}</h4>
-	<Button className="delete-button" onClick={() => { props.handleDeleteComment(props.id); }} bsStyle="danger" bsSize="xsmall">
-	<Glyphicon glyph="remove" />
-	</Button>
-	</div>    
-	);
+class Comment extends Component {
+
+	constructor(props) {
+		super();
+	}
+
+	getHash = (commentEmail) => {
+		return new MD5().update(commentEmail).digest('hex')
+	}
+
+	render() {
+		return (
+			<div className="comment-wrapper">
+			<img className="avatar" src={"https://www.gravatar.com/avatar/" + this.getHash(this.props.email)} />
+			<h4 className="email">{this.props.email}</h4>
+			<h4 className="message">{this.props.message}</h4>
+			<Button className="delete-button" onClick={() => { this.props.handleDeleteComment(this.props.id); }} bsStyle="danger" bsSize="xsmall">
+			<Glyphicon glyph="remove" />
+			</Button>
+			</div> 
+
+			)
+	}	
+};
 
 Comment.propTypes = {
 	email: PropTypes.string.isRequired,
