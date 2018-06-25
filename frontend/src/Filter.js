@@ -26,25 +26,26 @@ class Filter extends Component {
 
 	render() {
 		return (
-
 			<div className="filter-wrapper">
-			<form onSubmit={this.submitFilter}>
-			<input
-			className="filter-input input-style"
-			type="text"
-			name="filter"
-			placeholder="Filter by email"
-			alue={this.state.filterValue}
-			onChange={e => this.updateFilterValue(e)}
-			/>
-			<Button className="filter-button" type="submit" bsStyle="primary" bsSize="large"><Glyphicon className="search" glyph="search" /> </Button>
-			</form>
+				<form onSubmit={this.submitFilter}>
+					<input
+						className="filter-input input-style"
+						type="text"
+						name="filter"
+						placeholder="Filter by email"
+						alue={this.state.filterValue}
+						onChange={e => this.updateFilterValue(e)}
+					/>
+					<Button className="filter-button" type="submit" bsStyle="primary" bsSize="large"><Glyphicon className="search" glyph="search" /> </Button>
+				</form>
 			</div>  
-			)}
+		);
 	};
+}
 
-	export default Filter
 
-	Filter.propTypes = {
-		handleFilter: PropTypes.func.isRequired,
-	}
+Filter.propTypes = {
+	handleFilter: PropTypes.func.isRequired,
+};
+
+export default Filter;

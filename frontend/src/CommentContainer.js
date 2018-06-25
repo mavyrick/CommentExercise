@@ -17,42 +17,42 @@ getFilterData = (dataFromFilter) => {
 }
 
 render() {
-
  const commentMap = this.props.data.map(comment => {
   if (comment.email === this.state.filterData || this.state.filterData === '') {
     return (
       <Comment 
-      email={comment.email}
-      message={comment.message}
-      key={comment._id}
-      id={comment._id}
-      timestamp={comment.updatedAt}
-      handleDeleteComment={this.props.handleDeleteComment}
+        email={comment.email}
+        message={comment.message}
+        key={comment._id}
+        id={comment._id}
+        timestamp={comment.updatedAt}
+        handleDeleteComment={this.props.handleDeleteComment}
       >
-      { comment.message }
+        { comment.message }
       </Comment> 
-      )
-  }
+    );
+  };
 })
- return (
-  <div className="container-wrapper">
-  <Filter handleFilter={this.getFilterData} />
-  <div>
-  { commentMap }
-  </div>
-  </div>
-  )
-}
+
+   return (
+    <div className="container-wrapper">
+      <Filter handleFilter={this.getFilterData} />
+      <div>
+        { commentMap }
+      </div>
+    </div>
+   );
+  };
 }
 
 CommentContainer.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape({
+    data: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     email: PropTypes.string,
     message: PropTypes.string,
   })),
   handleDeleteComment: PropTypes.func.isRequired,
-}
+};
 
 CommentContainer.defaultProps = {
   data: [],

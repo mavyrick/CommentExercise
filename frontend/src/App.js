@@ -22,7 +22,7 @@ componentDidMount() {
   this.loadCommentsFromServer();
   if (!this.pollInterval) {
     this.pollInterval = setInterval(this.loadCommentsFromServer, 2000);
-  }
+  };
 }
 
 componentWillUnmount() {
@@ -36,7 +36,7 @@ loadCommentsFromServer = () => {
   .then((res) => {
     if (!res.success) this.setState({ error: res.error });
     else this.setState({ data: res.data });
-  })
+  });
 }
 
 onChangeText = (e) => {
@@ -77,26 +77,26 @@ submitComment = (e) => {
 render() {
   return (
     <div className="app-wrapper">
-    <div className="test-align">
-    <div className="comment-form">
-    <CommentForm
-    email={this.state.email}
-    message={this.state.message}
-    handleChangeText={this.onChangeText}
-    submitComment={this.submitComment}
-    />
-    </div>
-    <div className="comment-container">
-    <CommentContainer
-    data={this.state.data}
-    handleDeleteComment={this.onDeleteComment}
-    />
-    </div>
-    {this.state.error && <p>{this.state.error}</p>}
-    </div>
+      <div className="test-align">
+        <div className="comment-form">
+          <CommentForm
+            email={this.state.email}
+            message={this.state.message}
+            handleChangeText={this.onChangeText}
+            submitComment={this.submitComment}
+          />
+       </div>
+      <div className="comment-container">
+        <CommentContainer
+          data={this.state.data}
+          handleDeleteComment={this.onDeleteComment}
+        />
+      </div>
+        {this.state.error && <p>{this.state.error}</p>}
+      </div>
     </div>
     );
-}
+  };
 }
 
 export default App;
