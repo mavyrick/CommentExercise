@@ -12,7 +12,7 @@ class CommentContainer extends Component {
   };
 }
 
-myCallback = (dataFromFilter) => {
+getFilterData = (dataFromFilter) => {
   this.setState({ filterData: dataFromFilter });
 }
 
@@ -36,7 +36,7 @@ render() {
 })
  return (
   <div className="container-wrapper">
-  <Filter handleFilter={this.myCallback} />
+  <Filter handleFilter={this.getFilterData} />
   <div>
   { commentMap }
   </div>

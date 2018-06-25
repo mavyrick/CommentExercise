@@ -34,7 +34,7 @@ class Filter extends Component {
 			type="text"
 			name="filter"
 			placeholder="Filter by email"
-			value={this.state.filterValue}
+			alue={this.state.filterValue}
 			onChange={e => this.updateFilterValue(e)}
 			/>
 			<Button className="filter-button" type="submit" bsStyle="primary" bsSize="large"><Glyphicon className="search" glyph="search" /> </Button>
@@ -46,10 +46,5 @@ class Filter extends Component {
 	export default Filter
 
 	Filter.propTypes = {
-		handleChangeText: PropTypes.func.isRequired,
-		filter: PropTypes.string,
-	}
-
-	Filter.defaultProps = {
-		filter: '',
+		handleFilter: PropTypes.func.isRequired,
 	}
